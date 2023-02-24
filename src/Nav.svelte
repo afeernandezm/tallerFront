@@ -1,21 +1,21 @@
 <script>
-    import {Link} from "svelte-routing";
+    import { Link } from "svelte-routing";
 </script>
 
-
 <nav>
-	<ul>
-		<li><Link to="/">Inicio</Link></li>
-		<li><Link to="/articulos">Articulos</Link></li>
-		<li><Link to="/clientes">Clientes</Link></li>
-	</ul>
+    <ul>
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/piezas">Piezas</Link></li>
+        <li><Link to="/clientes">Clientes</Link></li>
+    </ul>
 </nav>
-
 
 <style>
     nav {
-        background-color: antiquewhite;
+        background-color: rgb(0, 0, 0);
         padding: 10px;
+        color: white;
+        text-decoration: none;
     }
 
     ul {

@@ -1,1 +1,1 @@
-Inicio
+<h1>TALLER FRONT</h1>
