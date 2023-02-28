@@ -5,7 +5,6 @@
     import Buscar from "./Buscar.svelte";
     import Cliente from "./Cliente.svelte";
     import Boton from "./BotonCliente.svelte";
-
     let clienteInsertar = {};
 
     let datosFiltrados = [];
@@ -25,7 +24,12 @@
     );
 </script>
 
-<Buscar bind:busqueda={patron} />
+<div class="container-fluid p-4 p-md-3">
+    <div style="text-align: center; border: 1px solid black;" class="mt-4">
+        <strong>Buscar por nombre</strong>
+        <Buscar bind:busqueda={patron} />
+    </div>
+</div>
 
 <hr />
 
@@ -33,13 +37,14 @@
     <Boton documento={clienteInsertar} />
 </Cliente>
 <br />
-
-{#each datosFiltrados as cliente}
-    <br />
-    <Cliente bind:cliente>
-        <Boton tipo="modificar" documento={cliente} />
-        <Boton tipo="eliminar" documento={cliente} />
-    </Cliente>
-    <br />
-    <br />
-{/each}
+<div class="row row-cols row-cols-md-2 row-cols-lg-3">
+    {#each datosFiltrados as cliente}
+        <br />
+        <Cliente bind:cliente>
+            <Boton tipo="modificar" documento={cliente} />
+            <Boton tipo="eliminar" documento={cliente} />
+        </Cliente>
+        <br />
+        <br />
+    {/each}
+</div>

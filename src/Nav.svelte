@@ -13,7 +13,7 @@
 <style>
     nav {
         background-color: rgb(0, 0, 0);
-        padding: 10px;
+        padding: 20px;
         color: white;
         text-decoration: none;
     }
